@@ -71,17 +71,18 @@ void convert_to_SLL(Tree **root)
     }
  
 }
+/*Insert to SLL*/
 int insert_last(int data)
 {
-    Slist *new = malloc(sizeof(Slist));
+    Slist *new = malloc(sizeof(Slist));//create node
     if(new == NULL)
     return -1;
     else{
-        if(head == NULL)
+        if(head == NULL)//list is empty
         head = new;
         else{
             Slist *t = head;
-            while(t->next)
+            while(t->next)//traverse untill last node
             {
                 t=t->next;
             }
